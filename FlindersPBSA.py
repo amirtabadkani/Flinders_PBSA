@@ -21,13 +21,13 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html= True)
 
 
-# CHEP_en = pd.read_csv('./data/Flinders.csv')
-# CHEP_ML = pd.read_csv('./data/Flinders_ML.csv')
+CHEP_en = pd.read_csv('./data/Flinders.csv')
+CHEP_ML = pd.read_csv('./data/Flinders_ML.csv')
 
 
-CHEP_en = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders.csv')
+# CHEP_en = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders.csv')
 
-CHEP_ML = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders_ML.csv')
+# CHEP_ML = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders_ML.csv')
 
 
 st.title(":red[Flinders University PBSA] - Building Performance Analytical Dashboard")
@@ -211,10 +211,10 @@ with st.container():
         
     def loadImages():
       
-        img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}')
-        # img = Image.open(f'./data/images/{get_metrics_EUI()[8].iloc[0]}')
-        ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png')
-        # ref = Image.open('./data/images/WWR-NS2_WWR-EW2_ShadeDepth0_SHGCVLT2_ExWall0.png')
+        # img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}')
+        img = Image.open(f'./data/images/{get_metrics_EUI()[9].iloc[0]}')
+        # ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png')
+        ref = Image.open('./data/images/REF02.png')
         return img,ref
     
     col1,col2,col3,col4 = st.columns([0.5,4,0.5,4])
