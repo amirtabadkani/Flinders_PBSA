@@ -1,4 +1,4 @@
-plotly
-streamlit
+plotly==5.14.1
+streamlit==1.24.0
 pandas
-pillow
+Pillow
