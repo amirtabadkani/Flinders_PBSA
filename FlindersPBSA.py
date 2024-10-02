@@ -232,7 +232,7 @@ with st.container():
     
     st.markdown("---")
 
-    st.header("**Design Inputs vs. Building Performance**")
+    # st.header("**Design Inputs vs. Building Performance**")
     
     # columns = ['WWR-NS', 'WWR-EW', 'ShadeType', 
     #    'SHGC', 'ExWall', 'Ventilation','EUI (kWh/m2)', 'ELECp (W/m2)', 'EUI Saved(-)Wasted(+)',
