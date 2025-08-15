@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Curl Ping
-        run: curl -s https://your-app-name.streamlit.app > /dev/null
+        run: curl -s https://flinders-uni-stantec.streamlit.app/ > /dev/null
