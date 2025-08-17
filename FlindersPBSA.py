@@ -29,6 +29,10 @@ CHEP_ML = pd.read_csv('./data/Flinders_ML.csv')
 
 # CHEP_ML = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders_ML.csv')
 
+# Check for keepalive ping
+if "ping" in st.query_params:
+    st.write("pong")  # lightweight response
+    st.stop()         # prevent rest of app from running
 
 st.title(":red[Flinders University PBSA] - Building Performance Analytical Dashboard")
 
@@ -436,5 +440,6 @@ with cols[3]:
             
 with cols[4]:
     ""
+
 
 
