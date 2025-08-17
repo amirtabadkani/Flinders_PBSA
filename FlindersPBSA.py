@@ -30,7 +30,8 @@ CHEP_ML = pd.read_csv('./data/Flinders_ML.csv')
 # CHEP_ML = pd.read_csv(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\Flinders_ML.csv')
 
 # Check for keepalive ping
-if "ping" in st.query_params:
+query_params = st.experimental_get_query_params()
+if "ping" in query_params:
     st.write("pong")  # lightweight response
     st.stop()         # prevent rest of app from running
 
@@ -440,6 +441,7 @@ with cols[3]:
             
 with cols[4]:
     ""
+
 
 
 
