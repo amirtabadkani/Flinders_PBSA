@@ -212,11 +212,11 @@ with st.container():
         try:
             # Dynamically chosen design iteration
             selected_name = get_metrics_EUI()[9].iloc[0]
-            selected_blob = blob_prefix + selected_name
+            selected_blob = selected_name
 
             # Reference image (hardcoded, like before)
             #ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png') #when running locally
-            ref_blob = blob_prefix + "REF02.png"
+            ref_blob = "REF02.png"
 
             # Download blobs
             #img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}') #when running locally
@@ -508,6 +508,7 @@ with cols[3]:
 with cols[4]:
     ""
  
+
 
 
 
