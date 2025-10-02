@@ -210,10 +210,10 @@ with st.container():
 
     def loadImages():
 
-            # img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}')
-            img = Image.open(f'./data/images/{get_metrics_EUI()[9].iloc[0]}')
-            # ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png')
-            ref = Image.open('./data/images/REF02.png')
+        # img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}')
+        img = Image.open(f'./data/images/{get_metrics_EUI()[9].iloc[0]}')
+        # ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png')
+        ref = Image.open('./data/images/REF02.png')
 
         return img,ref
     
@@ -495,6 +495,7 @@ with cols[3]:
 with cols[4]:
     ""
  
+
 
 
 
