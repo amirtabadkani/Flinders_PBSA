@@ -209,41 +209,28 @@ with st.container():
         st.plotly_chart(glare_performance, use_container_width=True)
 
     def loadImages():
-        try:
-            # Dynamically chosen design iteration
-            selected_name = get_metrics_EUI()[9].iloc[0]
-            selected_blob = selected_name
 
-            # Reference image (hardcoded, like before)
-            #ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png') #when running locally
-            ref_blob = "REF02.png"
+            # img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}')
+            img = Image.open(f'./data/images/{get_metrics_EUI()[9].iloc[0]}')
+            # ref = Image.open(r'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\REF02.png')
+            ref = Image.open('./data/images/REF02.png')
 
-            # Download blobs
-            #img = Image.open(rf'C:\Users\atabadkani\StreamlitApps\FlindersEnCO2\data\images\{get_metrics_EUI()[9].iloc[0]}') #when running locally
-            selected_stream = container_client.get_blob_client(selected_blob).download_blob().readall()
-
-            ref_stream = container_client.get_blob_client(ref_blob).download_blob().readall()
-
-            # Open with PIL
-            img = Image.open(BytesIO(selected_stream))
-            ref = Image.open(BytesIO(ref_stream))
-            return img, ref
-
-        except Exception as e:
-            st.error(f"Error loading images: {e}")
-            return None, None
+        return img,ref
     
-    # ---- UI Layout ----
-    col1, col2, col3, col4 = st.columns([1.5, 4, 0.5, 4])
-
+    col1,col2,col3,col4 = st.columns([0.5,4,0.5,4])
+    
+    with col1:
+        ""
     with col2:
-        img, ref = loadImages()
-        if img:
-            st.image(img, caption='Selected Design Iteration', use_container_width=False)
-
+        st.subheader(':grey[**Proposed Design Iteration**]')
+        st.image(loadImages()[0], caption="", use_container_width = True)
+    with col3:
+        ""
     with col4:
-        if ref:
-            st.image(ref, caption='Reference Case', use_container_width=False)
+        st.subheader(':gray[**DtS Reference Design**]')
+        st.image(loadImages()[1], caption='', use_container_width = True)
+        
+        
     
     st.markdown("---")
 
@@ -508,6 +495,7 @@ with cols[3]:
 with cols[4]:
     ""
  
+
 
 
 
