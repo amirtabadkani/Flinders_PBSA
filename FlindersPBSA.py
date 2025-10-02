@@ -48,7 +48,7 @@ flinders_en['Energy Cost (AU$/yr)'] = flinders_en['EUI (kWh/m2)']*Floor_area*en_
 flinders_ML['Energy Cost (AU$/yr)'] = flinders_ML['EUI (kWh/m2)']*Floor_area*en_price
 
 with st.sidebar:
-    st.image('https://www.ceros.com/wp-content/uploads/2019/04/Stantec_Logo.png',use_container_width='auto',output_format='PNG')
+    st.image('./data/Stantec_Logo.png',use_container_width='auto',output_format='PNG')
     st.markdown('**_This tool is only built for demonstration purpose of Flinders PBSA project based in Adelaide, Australia to better understand the impact of different design variables on building energy and indoor visual/thermal comfort performance. Results should be interpreted as comparative only, and do not aim to predict actual building performance._**')
 
     
@@ -508,6 +508,7 @@ with cols[3]:
 with cols[4]:
     ""
  
+
 
 
 
